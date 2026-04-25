@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "reglass",
+  "version": "${version}",
+  "name": "ReGlass Library",
+  "description": "Client-side liquid-glass rendering library for Fabric mods.",
+  "authors": [
+    "sykia"
+  ],
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "liquid.glass.client.ReGlassLibraryClient"
+    ],
+    "main": [
+      "liquid.glass.ReGlass"
+    ]
+  },
+  "mixins": [
+    "reglass.mixins.json"
+  ],
+  "custom": {
+    "reglass:api": {
+      "configuratorEntrypoint": "reglass:configurator"
+    }
+  },
+  "depends": {
+    "fabricloader": ">=0.15.0",
+    "minecraft": ">=1.21.11-rc.2",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
